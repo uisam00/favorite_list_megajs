@@ -1,4 +1,4 @@
-# primeiroapp
+# favorite_list_megajs
 
 A new Flutter project.
 
