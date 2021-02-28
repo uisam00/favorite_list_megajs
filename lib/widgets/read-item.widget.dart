@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:primeiroapp/classes/favorite.dart';
 import 'package:primeiroapp/routes/app_routes.dart';
 
-import 'camp_form_noedit.dart';
+import 'campFormNoEdit.widget.dart';
 
 class ReadItem extends StatefulWidget {
   @override

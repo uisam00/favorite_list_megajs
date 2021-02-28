@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:primeiroapp/provider/favorites.provider-movie.dart';
 import 'package:primeiroapp/provider/favorites.provider-serie.dart';
 import 'package:primeiroapp/routes/app_routes.dart';
-import 'package:primeiroapp/widgets/camp_form.widget.dart';
+import 'package:primeiroapp/widgets/campFormEdit.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:primeiroapp/classes/favorite.dart';
@@ -108,7 +108,7 @@ class _AddItemState extends State<AddItem> {
       source: ImageSource.gallery,
     );
 
-    FocusScope.of(context).unfocus(focusPrevious: true);
+    FocusScope.of(context).unfocus();
     setState(() {
       imageFile = picture;
       _formData['cover'] = imageFile;

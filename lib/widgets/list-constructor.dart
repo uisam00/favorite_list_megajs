@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiroapp/routes/app_routes.dart';
-import 'favorite-tile.widget.dart';
+import 'favoriteTile.widget.dart';
 
 class ListConstructor extends StatelessWidget {
   final dynamic favorite;

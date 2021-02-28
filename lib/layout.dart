@@ -5,25 +5,19 @@ import 'menu/MenuSand.dart';
 
 class Layout {
   static Scaffold getContent(
-      BuildContext context, dynamic content, String nameAppbar,
+      BuildContext context, Widget body, String nameAppbar,
       [dynamic fActBut]) {
     void choicesAction(String choices) {
-      if (choices == MenuSand.ListMovie &&
-          ModalRoute.of(context).settings.name != AppRoutes.LIST_MOVIE) {
+      if (ModalRoute.of(context).settings.name == AppRoutes.LIST_MOVIE ||
+          ModalRoute.of(context).settings.name == AppRoutes.LIST_SERIE) {
+        Navigator.pop(context);
+      }
+      if (choices == MenuSand.ListMovie) {
         Navigator.of(context).pushNamed(AppRoutes.LIST_MOVIE);
-      } else if (choices == MenuSand.ListSerie &&
-          ModalRoute.of(context).settings.name != AppRoutes.LIST_SERIE) {
+      } else if (choices == MenuSand.ListSerie) {
         Navigator.of(context).pushNamed(AppRoutes.LIST_SERIE);
-
-        // } else if (choices == MenuSand.Settings){
-        //   Navigator.push(
-        //     context,
-        //     MaterialPageRoute(
-        //       builder: (context) => SettingsPage(),
-        //     ),
-        //   );
       } else {
-        Navigator.of(context).pop();
+        return;
       }
     }
 
@@ -34,8 +28,6 @@ class Layout {
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () {
                 Navigator.pop(context);
-                // Navigator.popUntil(
-                //     context, ModalRoute.withName(AppRoutes.HOME));
               },
             )
           : null,
@@ -95,7 +87,7 @@ class Layout {
 
     return Scaffold(
       appBar: myappbar,
-      body: content,
+      body: body,
       floatingActionButton: fActBut,
     );
   }

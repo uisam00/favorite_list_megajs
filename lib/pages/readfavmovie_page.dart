@@ -6,11 +6,11 @@ class ReadFavoriteMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String nameAppBar = "Filme";
-    final content = ReadItem();
+    final body = ReadItem();
 
     return Layout.getContent(
       context,
-      content,
+      body,
       nameAppBar,
     );
   }

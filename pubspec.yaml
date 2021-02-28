@@ -31,7 +31,7 @@ dependencies:
   provider:
   image_picker:
   firebase_storage:
-
+  sqflite: ^1.1.5
 dev_dependencies:
   flutter_test:
     sdk: flutter
